@@ -15,34 +15,39 @@ Things you may want to cover:
 ## usersテーブル
 |column|Type|Options|
 |------|----|-------|
-|name|string|null: false, foreign_key: true, unique: true|
+|name|string|null: false, unique: true|
 
 ### Association
 - has_many :messages
-- belong_to :user_id
+- has_many :groups, through :users_groups
+- belong_to :users_groups
 
 ## massagesテーブル
 |column|Type|Options|
 |------|----|-------|
-|message|text|null: false|
+|text|text||
 |image|text||
-
+|user_id|integer|null: false, foreign_key: true|
+|group_id||integer|null: false, foreign_key: true|
 ### Association
-- belong_to
+- belong_to :user
+- belong_to :group
 
 ## groupsテーブル
 |column|Type|Options|
 |------|----|-------|
-|name|string|null: false, foreign_key: true, unique: true|
+|name|string|null: false, unique: true|
 
 ### Association
-- belong_to :group_id
+- has_many :users, through :users_groups
+- belong_to :users_groups
+- has_many :messages
 
 ## groups_usersテーブル
 |column|Type|Options|
 |------|----|-------|
-|user_id|string|null: false, foreign_key: true|
-|group_id||string|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
+|group_id||integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
