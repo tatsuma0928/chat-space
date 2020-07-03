@@ -20,7 +20,7 @@ Things you may want to cover:
 ### Association
 - has_many :messages
 - has_many :groups, through :users_groups
-- belong_to :users_groups
+- has_many :users_groups
 
 ## massagesテーブル
 |column|Type|Options|
@@ -40,7 +40,7 @@ Things you may want to cover:
 
 ### Association
 - has_many :users, through :users_groups
-- belong_to :users_groups
+- has_many :users_groups
 - has_many :messages
 
 ## groups_usersテーブル
