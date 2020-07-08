@@ -1,0 +1,22 @@
+.side_bar
+  .side_bar__top
+    .side_bar__user-name
+      .side_bar__name-list
+        %h3.side_bar__name masa
+        %ul.side_bar__icon
+          %li.left_icon 
+            = link_to "#", class: "side_bar__btn" do
+              = icon('fas', 'edit')
+          %li.right_icon 
+            = link_to "#", class: "side_bar__btn" do
+              = icon('fas', 'cog')
+
+  .side_bar_group-list
+    .side_bar__bottom
+      .group-icon 
+        = link_to "#", class: "group_name" do
+          TECHCAMP
+      .group-message 
+        = link_to "#", class: "group_contact" do
+          まだメッセージがありません。
+     

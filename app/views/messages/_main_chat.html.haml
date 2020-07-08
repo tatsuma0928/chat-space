@@ -1,0 +1,22 @@
+.main_chat
+  .main_chat__group-info
+    .main_chat__group-info-form
+      .main_chat__group-left
+        .main_chat__group-left-top text
+        .main_chat__group-left-bottom member:masa
+      =link_to "#", class:"main_chat__group-right" do
+        Edit
+  .main_chat__message-list
+    .main_chat__message-list-form
+      .main_chat__message-list-top
+        .main_chat__message-list-top__user-name masa
+        .main_chat__message-list-top__date 2020/07/07
+      .main_chat__message-list-bottom おはよう
+  .main_chat__message-bottom
+    .main_chat__message-form
+      .main_chat__user-box
+        %input{type: "text", placeholder: "type a message",class: "message_area"}
+        %label{class: "input-box__image"}
+          = icon('fas', 'image')
+          %input{type: "file", class: "input-box__image__file"}
+      %input{type: "submit",value: "Send", class: "submit__btn"}
