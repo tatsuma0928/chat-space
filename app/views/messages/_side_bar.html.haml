@@ -1,22 +1,22 @@
-.side_bar
-  .side_bar__top
-    .side_bar__user-name
-      .side_bar__name-list
-        %h3.side_bar__name masa
-        %ul.side_bar__icon
-          %li.left_icon 
-            = link_to "#", class: "side_bar__btn" do
+.side-bar
+  .side-bar__top
+    .side-bar__top--user-name
+      .side-bar__name-list
+        %h3.side-bar__name-list--name masa
+        %ul.side-bar__name-list--icon
+          %li.side-bar__name-list--icon--left 
+            = link_to "#", class: "side-left__btn" do
               = icon('fas', 'edit')
-          %li.right_icon 
-            = link_to "#", class: "side_bar__btn" do
+          %li.side-bar__name-list--icon--right 
+            = link_to "#", class: "side-right__btn" do
               = icon('fas', 'cog')
 
-  .side_bar_group-list
-    .side_bar__bottom
-      .group-icon 
+  .side-bar__group-list
+    .side-bar__group-list--bottom
+      .side-bar__group-list--bottom--group-icon 
         = link_to "#", class: "group_name" do
           TECHCAMP
-      .group-message 
+      .side-bar__group-list--bottom--group-message 
         = link_to "#", class: "group_contact" do
           まだメッセージがありません。
      
