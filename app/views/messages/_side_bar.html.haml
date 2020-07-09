@@ -6,18 +6,18 @@
           = current_user.name
         %ul.side-bar__name-list--icon
           %li.side-bar__name-list--icon--left 
-            = link_to "#", class: "side-left__btn" do
+            = link_to new_group_path, class: "side-left__btn" do
               = icon('fas', 'edit')
           %li.side-bar__name-list--icon--right 
-            = link_to edit_users_path(current_user), class: "side-right__btn" do
+            = link_to edit_user_path(current_user), class: "side-right__btn" do
               = icon('fas', 'cog')
 
   .side-bar__group-list
-    .side-bar__group-list--bottom
-      .side-bar__group-list--bottom--group-icon 
-        = link_to "#", class: "group_name" do
-          TECHCAMP
-      .side-bar__group-list--bottom--group-message 
-        = link_to "#", class: "group_contact" do
-          まだメッセージがありません。
+    - current_user.groups.each do |group|
+      .side-bar__group-list--bottom
+        = link_to '#' do
+          .side-bar__group-list--bottom--group-name 
+            = group.name
+          .side-bar__group-list--bottom--group-message 
+            まだメッセージがありません。
      
