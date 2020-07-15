@@ -15,7 +15,7 @@
   .side-bar__group-list
     - current_user.groups.each do |group|
       .side-bar__group-list--bottom
-        = link_to group_messages_path(group) do
+        = link_to group_messages_path(group), calss:"group-form" do
           .side-bar__group-list--bottom--group-name 
             = group.name
           .side-bar__group-list--bottom--group-message 

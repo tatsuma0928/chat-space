@@ -64,9 +64,14 @@
         &--group-name {
           font-size: 15px;
           margin-bottom: 5px;
+          color: #ffffff;
         }
         &--group-message {
           font-size: 11px;
+          color: #ffffff;
+        }
+        .group-form {
+          text-decoration: none;
         }
       }  
     }
