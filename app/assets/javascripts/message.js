@@ -52,11 +52,10 @@ $(function(){
       processData: false,
       contentType: false
     })
-    .done(function(data){
+    .done(function(data) {
       let html = buildHTML(data);
       $('.main-chat__message-list').append(html);
-      $('.main-chat__message-list').animate({ scrollTop: $('.main-chat__message-list')[0].scrollHeight});    
-      $('form')[0].reset();
+      $('.main-chat__message-list').animate({ scrollTop: $('.main-chat__message-list')[0].scrollHeight});
     })
     .fail(function() {
       alert("メッセージ送信に失敗しました");
