@@ -15,10 +15,7 @@
 
   .main-chat__message-list
     =render @messages
-    .main-chat__message-list--top
-      .main-chat__message-list--top--name 
-      .main-chat__message-list--top--date 
-    .main-chat__message-list--bottom 
+    
   .main-chat__message-bottom
     = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
       = f.text_field :content, class: 'message-area', placeholder: 'type a message'
